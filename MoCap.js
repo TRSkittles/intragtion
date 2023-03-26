@@ -134,7 +134,7 @@ loader.load("../Model/Xbot.glb", function (gltf) {
   });
 
   skeleton = new THREE.Skeleton(bones);
-  saveObj.skeleton = skeleton;
+  // saveObj.skeleton = skeleton;
   skeleton_helper = new THREE.SkeletonHelper(model);
   skeleton_helper.visible = true;
 
@@ -317,6 +317,7 @@ function computeR(A, B) {
 }
 
 function onResults2(results) {
+  saveObj.res = results
   canvasCtx.save();
   canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
   canvasCtx.drawImage(
